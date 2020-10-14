@@ -4,9 +4,11 @@ import OrphanagesController from './controllers/OrphanagesController';
 const routes = Router();
 
 
-// index, showm createm update, delete
+// index, show create update, delete
+
 
 routes.get('/orphanages', OrphanagesController.index );
+routes.get('/orphanages/:id', OrphanagesController.show );//get by id
 routes.post('/orphanages', OrphanagesController.create );
 
 

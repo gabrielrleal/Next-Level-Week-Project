@@ -6,6 +6,9 @@ import { getRepository } from 'typeorm'; // typeorm utiliza repository pattern, 
 
 
 export default{
+
+
+
     //get
     async index(request: Request , response: Response){
         const orphanagesRepository = getRepository(Orphanage);
@@ -13,7 +16,16 @@ export default{
 
         return response.json(orphanages)
     },
-    
+    //get by id
+    async show(request: Request , response: Response){
+        const { id } =  request.params;
+
+        const orphanagesRepository = getRepository(Orphanage);
+        const orphanage = await orphanagesRepository.findOneOrFail(id);
+
+        return response.json(orphanage)
+    },
+    //post
     async create(request: Request, response: Response ) {
 
         const {
