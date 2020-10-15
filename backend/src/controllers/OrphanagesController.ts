@@ -39,7 +39,13 @@ export default{
         } = request.body;
     
         const orphanagesRepository = getRepository(Orphanage);
-    
+        // para salvar imagens
+        const requestImages = request.files as Express.Multer.File[]; //instruindo que é um Array de arquivos. (multer)
+        
+        const images = requestImages.map(image => { // percorre cada uma das imagens
+            return { path: image.filename }// retorna objeto contendo path( unica informação que precisa preencher ) o resto preenche automaticamente
+        })          //  filename ->  nome do arquivo que foi salvo em disco
+        
         const orphanage = orphanagesRepository.create({ //cria, deixa pré-criado
             name,
             latitude,
@@ -47,7 +53,8 @@ export default{
             about,
             instructions,
             opening_hours,
-            open_on_weekends
+            open_on_weekends,
+            images
         })
     
         await orphanagesRepository.save(orphanage); //save- persiste os dados criados acima no banco de dados
