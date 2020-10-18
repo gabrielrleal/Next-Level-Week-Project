@@ -50,7 +50,7 @@ export class createOrphanages1602691294705 implements MigrationInterface {
                 {
                     name: 'open_on_weekends',
                     type: 'boolean',
-                    default: false,
+                    // default: false,
                 },
             ],
         }))

@@ -8,7 +8,7 @@ export default {
         return{// retorna cada um dos dados que quero retornar para o front-end
 
             id: image.id, 
-            url: `http://localhost3333/uploads/${image.path}` //para imagem retornarei o endereço da imagem
+            url: `http://localhost:3333/uploads/${image.path}` //para imagem retornarei o endereço da imagem
            
             
 
