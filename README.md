@@ -1,21 +1,21 @@
 
 
+##  HAPPY
 
-##  Tecnologias
+Happy is an application that connects people to institutional care homes to make many children's day happier.
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+## Tech/framework used
+
+Built in:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 
-##  Projeto
-
-O Happy é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz 
-
 ##  Layout
 
-Nos links abaixo você encontra o layout do projeto web.
+In the links below you will find the layout of the web project.
 
 - [Layout Web](https://www.figma.com/file/mDEbnoojksG4w8sOxmudh3/Happy-Web)
 
